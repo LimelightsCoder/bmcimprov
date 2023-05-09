@@ -12,7 +12,7 @@ const Navbar = ({ items }) => {
   };
 
   return (
-    <nav className="fixed w-full h-20 flex-row md:justify-between items-center p-4 z-1 py-10" style={{ zIndex: 999 }}>
+    <nav className="fixed w-full h-20 flex-row md:justify-between items-center p-4 py-10" style={{ zIndex: 999 }}>
       <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16">
         <div className="flex justify-start items-center">
           <a href="/">
@@ -25,7 +25,7 @@ const Navbar = ({ items }) => {
           </a>
         </div>
 
-        <div className="flex  justify-end items-center">
+        <div className="flex justify-end items-center">
           {toggleMenu ? (
             <AiOutlineClose
               fontSize={28}
@@ -41,7 +41,7 @@ const Navbar = ({ items }) => {
           )}
           {toggleMenu && (
             <ul
-              className="z-999 fixed top-0 -right-2 p-3 w-[70vw] h-screen shadow-2xl list-none
+              className="z-100 fixed top-0 -right-2 p-3 w-[70vw] h-screen shadow-2xl list-none
                             flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in text-right"
             >
               <li className="text-xl w-full my-2">

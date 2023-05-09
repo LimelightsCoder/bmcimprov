@@ -18,9 +18,7 @@ body {
 }
 
 .gradient-bg-home {
-  background-image: url("/Users/coryparrish/Desktop/bmc_app/client/bmc_webapp/Media/ezgif.com-video-to-gif.gif");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: #F7FFF6;
   /*background: radial-gradient(circle at center, #f5deb3, #f3d3a8, #f1c99e, #efbf94, #edaf8b, #eaa381, #e79678, #e48c6e);*/
 
   /*background: radial-gradient(circle at center, #1c2331, #38434d, #53626f, #6e8c93, #a1bdd7);*/
@@ -77,20 +75,37 @@ body {
 }
 
 
+
+
 @keyframes scroll {
   0% { transform: translateX(-100%); }
   50% { transform: translateX(0); }
-  100% { transform: translateX(130%); }
+  100% { transform: translateX(100%); }
 }
 
 .animate-scroll {
-  animation: scroll 10s linear infinite;
+  animation: scroll 8s linear infinite;
   display: inline-flex;
   white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
   overflow: hidden;
   offset: 0;
-  min-width: 100%;
+  width: max-content;
 }
+
+@media screen and (max-width: 390px) {
+  .textDiv {
+    padding-top: 100px;
+  }
+  .animate-scroll {
+    animation: scroll 8s linear infinite;
+    width: max-content;
+  }
+}
+
+
+
 
 
 
