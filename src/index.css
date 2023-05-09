@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,900;1,200;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:ital,wght@0,200;0,400;0,600;0,900;1,200;1,400;1,600&display=swap');
+
+* html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif, 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #F7FFF6;
+  overflow-x: hidden;
+}
+
+.gradient-bg-home {
+  background-image: url("/Users/coryparrish/Desktop/bmc_app/client/bmc_webapp/Media/ezgif.com-video-to-gif.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*background: radial-gradient(circle at center, #f5deb3, #f3d3a8, #f1c99e, #efbf94, #edaf8b, #eaa381, #e79678, #e48c6e);*/
+
+  /*background: radial-gradient(circle at center, #1c2331, #38434d, #53626f, #6e8c93, #a1bdd7);*/
+  /*background: radial-gradient(circle at center, #5bc0de, #3399cc, #336699, #003366);*/
+
+  /*background: radial-gradient(circle, #ff0099, #49007f, #000000, #008f39, #fff600);*/
+  /*background: radial-gradient(circle at center, #f7b267, #f79d65, #f4845f, #f27059, #ea4c88);*/
+  /*background-image: linear-gradient(to bottom, #000000, #1c161a, #2b2632, #34394c, #334f66, #44647a, #56798e, #698fa3, #93a8bb, #bbc3d2, #dfe0e8, #ffffff);*/
+}
+
+.gradient-bg-bmchistory {
+  background: #F7FFF6;
+}
+
+
+.gradient-bg-footer {
+  background: #F7FFF6;
+}
+
+.blue-glassmorphism {
+  background: rgb(39, 51, 89, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* white glassmorphism */
+.white-glassmorphism {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+.text-gradient {
+  background-color: #f09433;
+  background-image: radial-gradient(at 4% 36%, hsla(0,0%,100%,1) 0, transparent 53%), radial-gradient(at 100% 60%, rgb(0, 0, 0) 0, transparent 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@font-face {
+  font-family: "Garage Gothic FB Bold";
+  src: url("/Users/coryparrish/Desktop/bmc_app/client/bmc_webapp/public/Garage Gothic FB Bold.otf")
+}
+
+.gothic {
+  font-family: "Garage Gothic FB Bold";
+}
+
+
+@keyframes scroll {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(0); }
+  100% { transform: translateX(130%); }
+}
+
+.animate-scroll {
+  animation: scroll 10s linear infinite;
+  display: inline-flex;
+  white-space: nowrap;
+  overflow: hidden;
+  offset: 0;
+  min-width: 100%;
+}
+
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
