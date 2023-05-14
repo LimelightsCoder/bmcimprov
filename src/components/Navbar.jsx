@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { HiMenu, HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import logo from "/src/assets/bmcalt 1.svg";
 
 const Navbar = ({ items }) => {
   const [toggleMenu, setToggleMenu] = useState(false);

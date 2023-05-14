@@ -1,6 +1,6 @@
 import React from "react";
-import bmcimg from "/Users/coryparrish/Desktop/bmc_app/client/src/assets/bmcimg.png";
-import budo from "/Users/coryparrish/Desktop/bmc_app/client/src/assets/budokan.png";
+import bmcimg from "/Users/coryparrish/Desktop/bmc_app_ui/client/src/assets/bmcimg.png";
+import budo from "/Users/coryparrish/Desktop/bmc_app_ui/client/src/assets/budokan.png";
 
 const Classes = () => {
   return (

@@ -1,3 +1,5 @@
 /Users/coryparrish/Desktop/bmc_app/client filter=lfs diff=lfs merge=lfs -text
+/Users/coryparrish/Desktop/bmc_app_ui/client/public/bmcvidbg.mp4 filter=lfs diff=lfs merge=lfs -text
+/Users/coryparrish/Desktop/bmc_app_ui/client/Media/bmchighlight.mp4 filter=lfs diff=lfs merge=lfs -text
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 *.MOV filter=lfs diff=lfs merge=lfs -text
