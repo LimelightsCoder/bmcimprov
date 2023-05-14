@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import homeBg from "/Users/coryparrish/Desktop/bmc_app/client/bmc_webapp/Media/ezgif.com-video-to-gif.gif";
+import { Link } from "react-router-dom";
+import videoBg from '/bmcvidbg.mp4';
 import centerLogo from "/src/assets/bmclogo1.svg";
 
 const Home = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // adjust the breakpoint as needed
+      setIsMobile(window.innerWidth < 390); // adjust the breakpoint as needed
     };
     window.addEventListener("resize", handleResize);
     return () => {
@@ -16,27 +16,11 @@ const Home = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const backgroundStyle = {
-    backgroundImage: `url(${homeBg})`,
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-    zIndex: "0",
-  };
 
   const centerLogoStyle = {
-    width: isMobile ? "80%" : "80%", // adjust the size for mobile and non-mobile screens
+    width: isMobile ? "90%" : "60%", // adjust the size for mobile and non-mobile screens
     zIndex: "2",
+    paddingTop: isMobile ? "20px" : "80px",
   };
 
   const overlayStyle = {
@@ -44,32 +28,41 @@ const Home = () => {
     top: 0,
     left: 0,
     width: "100%",
-    height: "100%",
+    height: "100vh",
     backgroundColor: "rgba(255, 255, 255, 0.5)",
     zIndex: "1",
   };
 
   const textDivStyle = {
-    position: "fixed",
-    top: scrollPosition < 100 ? "50%" : "-50%",
-    transition: "top 0.3s ease-in-out",
-    width: "100%",
-    zIndex: "1",
+    transform: "translateY(-50%)",
+    maxWidth: isMobile ? "390px" : "none",
+    zIndex: "5",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    paddingTop: isMobile ? "30px" : "420px",
+    paddingTop: isMobile ? "60px" : "10px",
     pointerEvents: "none",
+    bottom: "",
   };
 
-  const textDivClass = scrollPosition > 100 ? "hidden" : "";
+  const footerStyle = {
+    position: "absolute",
+    bottom: -100,
+    width: "100%",
+    height: "80px",
+    zIndex: 1 // set a lower z-index value
+  };
+  
+
+  const textDivClass = "animate-scroll";
 
   return (
-    <div style={overlayStyle}>
-      <div
-        className="flex w-full justify-center items-center py-10"
-        style={backgroundStyle}
-      >
+    <div className="home-container">
+      <video className="home-background" autoPlay loop muted style={{ width: '100%', height: '100vh', objectFit: 'cover' }}>
+        <source src={videoBg} type="video/mp4" />
+      </video>
+      <div className="flex w-full justify-center items-center" >
+        <div  style={overlayStyle} ></div>
         <div
           style={{
             display: "flex",
@@ -77,7 +70,7 @@ const Home = () => {
             alignItems: "center",
             justifyContent: "center",
             width: "100vh",
-            paddingTop: "4rem",
+            paddingTop: isMobile ? "40px" : "40px",
           }}
         >
           <img
@@ -86,14 +79,30 @@ const Home = () => {
             className="z-10 center-logo"
             style={centerLogoStyle}
           />
-          <div
-            className={`flex text-center text-6xl sm:text-9xl w-full text-[#ffe500] z-10 gothic animate-scroll ${textDivClass}`}
-            style={textDivStyle}
-          >
-            EVERYBODY CAN EAT...
-          </div>
+          {isMobile && window.innerWidth <= 390 ? null : (
+            <div
+              className={`flex text-center text-6xl sm:text-9xl w-full text-[#ffe500] z-100 gothic animate-scroll ${textDivClass}`}
+              style={textDivStyle}
+            >
+              <span style={{ whiteSpace: "nowrap" }}>
+                EVERYBODY CAN EAT...
+              </span>
+            </div>
+          )}
         </div>
       </div>
+
+      <div className="flex flex-col sm:flex-row justify-center items-center w-full " style={footerStyle}>
+      <p className="text-center mt-3 text-white font-bold text-base justify-end items-end relative roboto pr-10">
+          <Link to="/show-dates">SHOW DATES</Link>
+        </p>
+        <p className="text-center mt-3 text-white font-bold text-base justify-end items-end relative roboto pr-10">
+          <Link to="/classes">CLASSES</Link>
+        </p>
+        <p className="text-center mt-3 text-white font-bold text-base justify-end items-end relative roboto pr-10">
+          <Link to="/squad">THE SQUAD</Link>
+        </p>
+        </div>
     </div>
   );
 };

@@ -2,18 +2,27 @@ import React from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-
 const Footer = () => {
+  const footerStyle = {
+    position: "fixed",
+    bottom: -25,
+    width: "100%",
+    height: "80px",
+    zIndex: 1 // set a lower z-index value
+  };
 
-
-    return (
-        <div className="flex w-full justify-center items-center">
-      <div className="flex mf:flex-row flex-col items-start justify-between mf:p-20 py-12 px-4">
-        <div className="flex flex-1 justify-start flex-col mf:mr-10 ml-10"></div>
-        <h6>2023 ©️ Bernie Mac & Cheese</h6>
-        </div>
-        </div>
-    );
-}
+  return (
+    <div style={footerStyle}>
+      <div className="flex mf:flex-col flex-col items-center justify-between mf:p-2 pt-2 px-4">
+        <h6
+          className="text-black roboto mt-1 justify-center items-center text-center"
+          style={{ fontSize: "12px", textAlign: "center" }}
+        >
+          2023 ©️ Bernie Mac & Cheese
+        </h6>
+      </div>
+    </div>
+  );
+};
 
 export default Footer;
