@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Sean from "/Users/coryparrish/Desktop/bmc_app_ui/client/src/assets/sean.jpeg";
 import Taty from "/Users/coryparrish/Desktop/bmc_app_ui/client/src/assets/taty.jpeg";
 import Simone from "/Users/coryparrish/Desktop/bmc_app_ui/client/src/assets/simone.png";
