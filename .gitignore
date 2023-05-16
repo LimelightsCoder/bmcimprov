@@ -26,5 +26,6 @@ assets
 *.sln
 *.sw?
 
-.eslintrc.cjs
+/Users/coryparrish/Desktop/bmc_app_ui/client/.eslintrc.cjs
 
+*.mp4
