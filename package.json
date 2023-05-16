@@ -1,7 +1,7 @@
 {
   "name": "bmc_webapp",
   "private": true,
-  "homepage": "https://LimelightsCoder.github.io/bmcimprov",
+  "homepage": "https://github.com/LimelightsCoder/bmcimprov.git",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
