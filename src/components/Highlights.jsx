@@ -1,5 +1,5 @@
 import React from "react";
-import highlightVideo1 from "../Media/bmchighlight.mp4";
+import highlightVideo1 from "/Media/bmchighlight.mp4";
 
 const Highlights = () => {
   return (
