@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import bmcimg from "../src/assets/bmcimg.png";
+import bmcimg from "/src/assets/bmcimg.png";
 
 const stripePromise = loadStripe("YOUR_PUBLISHABLE_KEY");
 

@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import img1 from "../src/assets/4-20_FourthWall_BernieMacAndCheese_147.jpeg";
-import img2 from "../src/assets/4-20_FourthWall_BernieMacAndCheese_161.jpeg";
-import seenOn from "../src/assets/asSeenOn.png";
+import img1 from "/src/assets/4-20_FourthWall_BernieMacAndCheese_147.jpeg";
+import img2 from "/src/assets/4-20_FourthWall_BernieMacAndCheese_161.jpeg";
+import seenOn from "/src/assets/asSeenOn.png";
 
 const BmcHistory = () => {
   return (

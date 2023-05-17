@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import videoBg from '/bmcvidbg.mp4';
-import centerLogo from "../src/assets/bmclogo1.svg";
+import centerLogo from "/src/assets/bmclogo1.svg";
 
 const Home = () => {
   const [isMobile, setIsMobile] = useState(false);
