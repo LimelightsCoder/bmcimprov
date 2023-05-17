@@ -3,7 +3,7 @@ button.addEventListener("click", () => {
   const bundleQuantity = parseInt(document.getElementById("bundleQuantity").textContent);
   const classQuantity = parseInt(document.getElementById("classQuantity").textContent);
 
-  fetch("http://localhost:3000/create-checkout-session", {
+  fetch("https://bmc-webapp.onrender.com/create-checkout-session", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

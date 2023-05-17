@@ -62,7 +62,7 @@ const Registration = () => {
   
       if (bundleQuantity > 0 && classQuantity === 0) {
         const response = await fetch(
-          "http://localhost:3000/create-checkout-session",
+          "https://bmc-webapp.onrender.com/create-checkout-session",
           {
             method: "POST",
             headers: {
@@ -86,7 +86,7 @@ const Registration = () => {
         }
       } else if (bundleQuantity === 0 && classQuantity > 0) {
         const response = await fetch(
-          "http://localhost:3000/create-checkout-session",
+          "https://bmc-webapp.onrender.com/create-checkout-session",
           {
             method: "POST",
             headers: {
@@ -111,7 +111,7 @@ const Registration = () => {
       } else if (bundleQuantity > 0 || classQuantity > 0) {
         // Proceed to checkout with both bundleQuantity and classQuantity
         const response = await fetch(
-          "http://localhost:3000/create-checkout-session",
+          "https://bmc-webapp.onrender.com/create-checkout-session",
           {
             method: "POST",
             headers: {
