@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Sean from "/Users/coryparrish/Desktop/bmc_app_ui/client/src/assets/sean.jpeg";
-import Taty from "/Users/coryparrish/Desktop/bmc_app_ui/client/src/assets/taty.jpeg";
-import Simone from "/Users/coryparrish/Desktop/bmc_app_ui/client/src/assets/simone.png";
-import Jay from "/Users/coryparrish/Desktop/bmc_app_ui/client/src/assets/jaywhite.jpeg";
-import Alexis from "/Users/coryparrish/Desktop/bmc_app_ui/client/src/assets/alexis.jpeg";
+import Sean from "/Users/coryparrish/Documents/GitHub/bmcimprov/client/src/assets/sean.jpeg";
+import Taty from "/Users/coryparrish/Documents/GitHub/bmcimprov/client/src/assets/taty.jpeg";
+import Simone from "/Users/coryparrish/Documents/GitHub/bmcimprov/client/src/assets/simone.png";
+import Jay from "/Users/coryparrish/Documents/GitHub/bmcimprov/client/src/assets/jaywhite.jpeg";
+import Alexis from "/Users/coryparrish/Documents/GitHub/bmcimprov/client/src/assets/alexis.jpeg";
 import { Link } from "react-router-dom";
 
 const Squad = () => {

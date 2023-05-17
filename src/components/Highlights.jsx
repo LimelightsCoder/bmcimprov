@@ -1,5 +1,5 @@
 import React from "react";
-import highlightVideo1 from "/Users/coryparrish/Desktop/bmc_app_ui/client/Media/bmchighlight.mp4";
+import highlightVideo1 from "/Users/coryparrish/Documents/GitHub/bmcimprov/client/Media/bmchighlight.mp4";
 
 const Highlights = () => {
   return (
