@@ -5,7 +5,7 @@ import budo from "/src/assets/budokan.png";
 const Classes = () => {
   return (
     <div>
-      <div className="flex mf:flex-row flex-col items-center justify-between mf:p-20 pb-12 pt-36 pr-12 pl-10">
+      <div className="flex mf:flex-row flex-col items-center justify-between mf:p-20 pb-12 pt-36 pr-12 pl-12">
         <div className="flex flex-1 justify-center flex-col sm:flex-row mf:mr-10 ml-10 items-center">
           <h1
             className="text-[#0d0630] py-20 sm:text-8xl text-5xl gothic text-left"
@@ -29,13 +29,14 @@ const Classes = () => {
                 paddingBottom: "40px",
               }}
             >
-              The Open Community <br /> Improv Workshop
+              The Open Community Improv Workshop
             </h2>
             <p
               style={{
                 wordBreak: "break-word",
                 paddingLeft: "40px",
                 paddingRight: "40px",
+                textAlign: "center",
                 fontFamily: "Poppins",
                 fontSize: "20px",
               }}

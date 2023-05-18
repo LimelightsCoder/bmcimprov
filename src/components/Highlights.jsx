@@ -12,6 +12,10 @@ const Highlights = () => {
         </div>
         <div className=" justify-center items-center flex flex-col">
           <video src={highlightVideo1} controls></video>
+          <h2>
+            2023 Highlights!
+            <a href="https://linktr.ee/bmcimprov" style={{color: "#8338EC"}}> Check out more!</a>
+          </h2>
         </div>
 
       </div>

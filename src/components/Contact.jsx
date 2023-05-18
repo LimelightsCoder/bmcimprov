@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect, useContext } from "react";
 import { AiFillLinkedin, AiFillInstagram, AiOutlineMail, AiFillYoutube } from "react-icons/ai";
+import { SiLinktree } from "react-icons/si";
 import {BsTwitter, BsTiktok} from "react-icons/bs";
 import { GoLocation } from "react-icons/go"
 import emailjs from '@emailjs/browser';
@@ -94,7 +95,7 @@ const Contact = () => {
   if (isSent) {
         return (
           <div>
-            <p className="sm:text-6xl text-[#0d0630] py-20 text-3xl text-center my-20 gothic break-words" style={{fontSize: "48px"}}>Thank you, your message was sent! <br /> We'll reach out to you soon.</p>
+            <p className="sm:text-6xl text-[#0d0630] py-60 px-6 text-3xl text-center gothic break-words" style={{fontSize: "48px"}}>Thank you, your message was sent! <br /> We'll reach out to you soon.</p>
           </div>
           
         );}
@@ -127,30 +128,34 @@ const Contact = () => {
             </button>
           </form>
 
-          <div style={{fontFamily: "Roboto"}}>
+          <div style={{fontFamily: "Roboto"}} className="flex flex-col">
           {/* <p  className="text-left mt-20 text-[#0d0630] font-light text-base">
             <GoLocation className="w-8 h-8 text-[#44BBA4]"/>
             Los Angeles, California
           </p> */}
-          <p  className="text-left mt-5 text-[#0d0630] font-light text-base">
+          <p  className="text-left mt-5 px-2 text-[#0d0630] font-light text-base">
             <AiOutlineMail className="w-8 h-8 text-[#ffc549]"/>
             BMCImprov@gmail.com
           </p>
-          <p  className="text-left mt-5 text-[#0d0630] font-light text-base justify-end items-end relative">
+          <p  className="text-left mt-5 px-2 text-[#0d0630] font-light text-base justify-end items-end relative">
             <AiFillInstagram className="w-8 h-8 text-[#FF006E]"/>
              <a href="https://www.instagram.com/bmcimprov/?hl=en">@BMCImprov</a>
           </p>
-          <p  className="text-left mt-5 text-[#0d0630] font-light text-base">
+          <p  className="text-left mt-5 px-2 text-[#0d0630] font-light text-base">
             <AiFillYoutube className="w-8 h-8 text-[#ff0000]"/>
              <a href="https://www.youtube.com/channel/UCs7clFm1WxK5-FcfaHmtl9g">BMC TV</a>
           </p>
-          <p  className="text-left mt-5 text-[#0d0630] font-light text-base justify-end items-end relative">
+          <p  className="text-left mt-5 px-2 text-[#0d0630] font-light text-base justify-end items-end relative">
             <BsTwitter className="w-8 h-8 text-[#1da1fa]"/>
              <a href="https://twitter.com/BmcImprov">@BMCImprov</a>
           </p>
-          <p  className="text-left mt-5 text-[#0d0630] font-light text-base justify-end items-end relative">
+          <p  className="text-left mt-5 px-2 text-[#0d0630] font-light text-base justify-end items-end relative">
             <BsTiktok className="w-8 h-8 text-[#170e35]"/>
              <a href="https://www.tiktok.com/@bmcimprov">@BMCImprov</a>
+          </p>
+          <p  className="text-left mt-5 px-2 text-[#0d0630] font-light text-base justify-end items-end relative">
+            <SiLinktree className="w-8 h-8 text-[#45E65F]"/>
+             <a href="https://linktr.ee/bmcimprov">BMC Improv</a>
           </p>
           </div>
 

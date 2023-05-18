@@ -150,7 +150,7 @@ const Registration = () => {
 
   return (
     <div>
-      <div className="flex mf:flex-row flex-col items-center justify-between mf:p-20 pb-12 pt-36 pr-12 pl-10">
+      <div className="flex mf:flex-row flex-col items-center justify-between mf:p-20 pb-12 pt-36 px-12 overflow-x-hidden">
         <div className="flex flex-1 justify-center flex-col sm:flex-row mf:mr-10 ml-10 items-center">
           <h1
             className="text-[#0d0630] py-20 sm:text-8xl text-5xl gothic text-left"
@@ -300,11 +300,12 @@ const Registration = () => {
             id="name"
             value={name}
             onChange={handleNameChange}
-            className={`my-4 blue-glassmorphism ${nameError ? "border-red-500" : ""}`}
+            className={`mb-4 ml-1 blue-glassmorphism ${nameError ? "border-red-500" : ""}`}
             required
           />
           {nameError && <p className="text-red-500">{nameError}</p>}
         </div>
+        
         <div className="flex flex-row">
           <label htmlFor="email">Email:</label>
           <input
@@ -312,7 +313,7 @@ const Registration = () => {
             id="email"
             value={email}
             onChange={handleEmailChange}
-            className={`my-4 blue-glassmorphism ${emailError ? "border-red-500" : "Please enter a valid email"}`}
+            className={`mb-4 ml-2 blue-glassmorphism ${emailError ? "border-red-500" : "Please enter a valid email"}`}
             required
           />
           {emailError && <p className="text-red-500">{emailError}</p>}
