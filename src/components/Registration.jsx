@@ -227,8 +227,8 @@ const Registration = () => {
             </h2>
             <br />
             <br />
-            <p>
-              Bundle Improv (4 classes) - April 2023 | Tuesdays 8:15pm-9:45pm{" "}
+            <p className="px-10">
+              Bundle Improv (4 classes) - April 2023 | Tuesdays 8:15pm-9:45pm
               <br />
               $30.00
             </p>
@@ -255,7 +255,7 @@ const Registration = () => {
             <br />
             <div className="h-[1px] w-full bg-[#6761A8] my-2" />
             <br />
-            <p>
+            <p className="px-10">
               Improv - Single Class <br /> $10.00
             </p>
             <br />
@@ -293,7 +293,7 @@ const Registration = () => {
           >
             <Elements stripe={stripePromise}>
               <div className="flex flex-col">
-        <div className="flex flex-row">
+        <div className="flex flex-row px-8">
           <label htmlFor="name">Name:</label>
           <input
             type="text"
@@ -306,7 +306,7 @@ const Registration = () => {
           {nameError && <p className="text-red-500">{nameError}</p>}
         </div>
         
-        <div className="flex flex-row">
+        <div className="flex flex-row px-8">
           <label htmlFor="email">Email:</label>
           <input
             type="email"
@@ -320,7 +320,7 @@ const Registration = () => {
         </div>
               <button
                 onClick={handleClick}
-                className="bg-[#3A86FF] hover:bg-[#FFBE0B] text-white px-8 py-1 rounded-full font-semibold shadow-xl"
+                className="bg-[#3A86FF] hover:bg-[#FFBE0B] text-white px-10 py-1 rounded-full font-semibold shadow-xl"
               >
                 Checkout
               </button>
