@@ -20,7 +20,12 @@ button.addEventListener("click", () => {
       return res.json().then(json => Promise.reject(json));
     })
     .then(({ url }) => {
-      window.location = url;
+      const cancelUrl = `${window.location.origin}/registration`; // Update the cancel URL here
+      const successUrl = `${window.location.origin}/success`; // Add the success URL here
+      const updatedUrl = new URL(url);
+      updatedUrl.searchParams.set("cancel_url", cancelUrl);
+      updatedUrl.searchParams.set("success_url", successUrl);
+      window.location.href = updatedUrl.href;
     })
     .catch(e => {
       console.error(e.error);
