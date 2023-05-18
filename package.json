@@ -1,7 +1,7 @@
 {
   "name": "bmcimprov",
   "private": true,
-  "homepage": "https://github.com/LimelightsCoder/bmcimprov.git",
+  "homepage": "https://bmcimprov.netlify.app",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
