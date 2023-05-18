@@ -94,7 +94,7 @@ const Contact = () => {
   if (isSent) {
         return (
           <div>
-            <p className="sm:text-6xl text-[#0d0630] py-80 text-3xl text-center my-20 gothic break-words" style={{fontSize: "48px"}}>Thank you, your message was sent! <br /> We'll reach out to you soon.</p>
+            <p className="sm:text-6xl text-[#0d0630] py-20 text-3xl text-center my-20 gothic break-words" style={{fontSize: "48px"}}>Thank you, your message was sent! <br /> We'll reach out to you soon.</p>
           </div>
           
         );}
