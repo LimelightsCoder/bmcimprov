@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import bmcimg from "/src/assets/bmcimg.png";
@@ -6,6 +6,7 @@ import bmcimg from "/src/assets/bmcimg.png";
 const stripePromise = loadStripe("YOUR_PUBLISHABLE_KEY");
 
 const Registration = () => {
+  const [sessionId, setSessionId] = useState("");
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [bundleQuantity, setBundleQuantity] = useState(0);
@@ -78,8 +79,15 @@ const Registration = () => {
         );
   
         if (response.ok) {
-          const { url } = await response.json();
-          window.location = url;
+          const { sessionId } = await response.json();
+          const stripe = await stripePromise;
+          const { error } = await stripe.redirectToCheckout({
+            sessionId,
+            cancelUrl: "YOUR_FRONTEND_CANCEL_URL",
+          });
+          if (error) {
+            setEmailError(`Error: ${error.message}`);
+          }
         } else {
           const error = await response.json();
           setEmailError(`Error: ${error.error}`);
@@ -102,14 +110,20 @@ const Registration = () => {
         );
   
         if (response.ok) {
-          const { url } = await response.json();
-          window.location = url;
+          const { sessionId } = await response.json();
+          const stripe = await stripePromise;
+          const { error } = await stripe.redirectToCheckout({
+            sessionId,
+            cancelUrl: "YOUR_FRONTEND_CANCEL_URL",
+          });
+          if (error) {
+            setEmailError(`Error: ${error.message}`);
+          }
         } else {
           const error = await response.json();
           setEmailError(`Error: ${error.error}`);
         }
       } else if (bundleQuantity > 0 || classQuantity > 0) {
-        // Proceed to checkout with both bundleQuantity and classQuantity
         const response = await fetch(
           "https://bmc-webapp.onrender.com/create-checkout-session",
           {
@@ -130,8 +144,15 @@ const Registration = () => {
         );
   
         if (response.ok) {
-          const { url } = await response.json();
-          window.location = url;
+          const { sessionId } = await response.json();
+          const stripe = await stripePromise;
+          const { error } = await stripe.redirectToCheckout({
+            sessionId,
+            cancelUrl: `${process.env.FRONTEND_URL}/registration`,
+          });
+          if (error) {
+            setEmailError(`Error: ${error.message}`);
+          }
         } else {
           const error = await response.json();
           setEmailError(`Error: ${error.error}`);
@@ -145,6 +166,23 @@ const Registration = () => {
       console.error(error);
     }
   };
+
+  useEffect(() => {
+    const redirectToCheckout = async () => {
+      if (sessionId) {
+        const stripe = await stripePromise;
+        stripe.redirectToCheckout({
+          sessionId,
+          cancelUrl: `${process.env.FRONTEND_URL}/registration`,
+        });
+      }
+    };
+  
+    redirectToCheckout();
+  }, [sessionId]);
+  
+  
+  
   
 
   return (
