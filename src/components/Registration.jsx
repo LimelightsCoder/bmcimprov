@@ -312,7 +312,7 @@ const Registration = () => {
             id="email"
             value={email}
             onChange={handleEmailChange}
-            className={`my-4 blue-glassmorphism ${emailError ? "border-red-500" : ""}`}
+            className={`my-4 blue-glassmorphism ${emailError ? "border-red-500" : "Please enter a valid email"}`}
             required
           />
           {emailError && <p className="text-red-500">{emailError}</p>}
