@@ -88,13 +88,13 @@ const Home = () => {
         className="flex flex-col sm:flex-row justify-center items-center w-full pt-10"
         style={footerStyle}
       >
-        <p className="flex text-center mt-3 text-white hover:text-black font-bold text-base justify-end items-end relative roboto pr-10">
+        <p className="flex text-center mt-3 text-white hover:text-black font-bold text-base justify-center items-center relative roboto px-10">
           <Link to="/show-dates">SHOW DATES</Link>
         </p>
-        <p className="flex text-center mt-3 text-white hover:text-black font-bold text-base justify-end items-end relative roboto pr-10">
+        <p className="flex text-center mt-3 text-white hover:text-black font-bold text-base justify-center items-center relative roboto px-10">
           <Link to="/classes">CLASSES</Link>
         </p>
-        <p className="flex text-center mt-3 text-white hover:text-black font-bold text-base justify-end items-end relative roboto pr-10">
+        <p className="flex text-center mt-3 text-white hover:text-black font-bold text-base justify-center items-center relative roboto px-10">
           <Link to="/squad">THE SQUAD</Link>
         </p>
       </div>
