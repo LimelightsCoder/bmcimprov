@@ -37,8 +37,8 @@ const Home = () => {
   };
 
   const footerStyle = {
-    position: "fixed",
-    bottom: isMobile ? 100 : 20,
+    position: "relative",
+    bottom: isMobile ? 0 : 20,
     width: "100%",
     height: "80px",
     zIndex: 1,
