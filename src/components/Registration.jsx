@@ -6,7 +6,6 @@ import bmcimg from "/src/assets/bmcimg.png";
 const stripePromise = loadStripe("YOUR_PUBLISHABLE_KEY");
 
 const Registration = () => {
-  const [sessionId, setSessionId] = useState("");
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [bundleQuantity, setBundleQuantity] = useState(0);
