@@ -30,6 +30,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-pdf": "^6.2.2",
+    "react-responsive": "^9.0.2",
     "react-router-dom": "^6.11.1",
     "sass-loader": "^13.2.2",
     "stripe": "^12.5.0"

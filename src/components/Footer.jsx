@@ -1,11 +1,9 @@
 import React from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 const Footer = () => {
   const footerStyle = {
     position: "fixed",
-    bottom: -25,
+    bottom: -45,
     width: "100%",
     height: "80px",
     zIndex: 1 // set a lower z-index value

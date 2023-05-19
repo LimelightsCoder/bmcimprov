@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { HiMenu, HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = ({ items }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
 
   const closeMenu = () => {
     setToggleMenu(false);
@@ -26,10 +27,16 @@ const Navbar = ({ items }) => {
 
   const menuWidth = toggleMenu ? (window.innerWidth >= 768 ? "30vw" : "45vw") : "0";
 
+  const handleLinkClick = (link) => {
+    closeMenu();
+    navigate(link);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <nav
       className={`fixed w-full h-20 flex-row md:justify-between items-center p-4 py-10 ${
-        isScrolled ? "bg-[#F7FFF6]" : ""
+        isScrolled ? "white-glassmorphism-nav" : ""
       }`}
       style={{ zIndex: 10 }}
     >
@@ -70,14 +77,14 @@ const Navbar = ({ items }) => {
                 <AiOutlineClose onClick={() => setToggleMenu(false)} />
               </li>
               {items.map((item, index) => (
-                <Link
-                  key={index}
-                  to={item.Link}
-                  className="my-2 text-lg py-2 px-7 mx-4"
-                  onClick={closeMenu}
-                >
-                  {item.title}
-                </Link>
+                <li key={index} className="my-2 text-lg py-2 px-7 mx-4">
+                  <Link
+                    to={item.Link}
+                    onClick={() => handleLinkClick(item.Link)}
+                  >
+                    {item.title}
+                  </Link>
+                </li>
               ))}
             </ul>
           )}

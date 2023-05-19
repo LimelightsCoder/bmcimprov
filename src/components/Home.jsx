@@ -1,26 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import videoBg from '/bmcvidbg.mp4';
+import { useMediaQuery } from "react-responsive";
+import videoBg from "/bmcvidbg.mp4";
 import centerLogo from "/src/assets/bmclogo1.svg";
 
 const Home = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 390); // adjust the breakpoint as needed
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
+  const isMobile = useMediaQuery({ maxWidth: 390 });
 
   const centerLogoStyle = {
-    width: isMobile ? "90%" : "60%", // adjust the size for mobile and non-mobile screens
+    width: isMobile ? "100%" : "70%",
     zIndex: "2",
-    paddingTop: isMobile ? "20px" : "80px",
+    justifyContent: "center",
+    alignItems: "center",
   };
 
   const overlayStyle = {
@@ -46,23 +37,28 @@ const Home = () => {
   };
 
   const footerStyle = {
-    position: "absolute",
-    bottom: -100,
+    position: "fixed",
+    bottom: isMobile ? 100 : 20,
     width: "100%",
     height: "80px",
-    zIndex: 1 // set a lower z-index value
+    zIndex: 1,
   };
-  
 
   const textDivClass = "animate-scroll";
 
   return (
     <div className="home-container">
-      <video className="home-background" autoPlay loop muted style={{ width: '100%', height: '100vh', objectFit: 'cover' }}>
+      <video
+        className="home-background"
+        autoPlay
+        loop
+        muted
+        style={{ width: "100%", height: "100vh", objectFit: "cover" }}
+      >
         <source src={videoBg} type="video/mp4" />
       </video>
-      <div className="flex w-full justify-center items-center" >
-        <div  style={overlayStyle} ></div>
+      <div className="flex w-full justify-center items-center overflow-x-hidden">
+        <div style={overlayStyle}></div>
         <div
           style={{
             display: "flex",
@@ -70,7 +66,7 @@ const Home = () => {
             alignItems: "center",
             justifyContent: "center",
             width: "100vh",
-            paddingTop: isMobile ? "40px" : "40px",
+            paddingTop: isMobile ? "120px" : "55px",
           }}
         >
           <img
@@ -79,30 +75,29 @@ const Home = () => {
             className="z-10 center-logo"
             style={centerLogoStyle}
           />
-          {isMobile && window.innerWidth <= 390 ? null : (
-            <div
-              className={`flex text-center text-6xl sm:text-9xl w-full text-[#ffe500] z-100 gothic animate-scroll ${textDivClass}`}
-              style={textDivStyle}
-            >
-              <span style={{ whiteSpace: "nowrap" }}>
-                EVERYBODY CAN EAT...
-              </span>
-            </div>
-          )}
+          <div
+            className={`flex text-center text-6xl sm:text-8xl w-full text-[#ffe500] z-100 gothic animate-scroll ${textDivClass}`}
+            style={textDivStyle}
+          >
+            <span style={{ whiteSpace: "nowrap" }}>EVERYBODY CAN EAT...</span>
+          </div>
         </div>
       </div>
 
-      <div className="flex flex-col sm:flex-row justify-center items-center w-full " style={footerStyle}>
-      <p className="text-center mt-3 text-white font-bold text-base justify-end items-end relative roboto pr-10">
+      <div
+        className="flex flex-col sm:flex-row justify-center items-center w-full pt-10"
+        style={footerStyle}
+      >
+        <p className="flex text-center mt-3 text-white hover:text-black font-bold text-base justify-end items-end relative roboto pr-10">
           <Link to="/show-dates">SHOW DATES</Link>
         </p>
-        <p className="text-center mt-3 text-white font-bold text-base justify-end items-end relative roboto pr-10">
+        <p className="flex text-center mt-3 text-white hover:text-black font-bold text-base justify-end items-end relative roboto pr-10">
           <Link to="/classes">CLASSES</Link>
         </p>
-        <p className="text-center mt-3 text-white font-bold text-base justify-end items-end relative roboto pr-10">
+        <p className="flex text-center mt-3 text-white hover:text-black font-bold text-base justify-end items-end relative roboto pr-10">
           <Link to="/squad">THE SQUAD</Link>
         </p>
-        </div>
+      </div>
     </div>
   );
 };
