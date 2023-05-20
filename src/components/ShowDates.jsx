@@ -35,7 +35,7 @@ const ShowDates = () => {
               href="https://linktr.ee/bmcimprov"
               className="text-black font-bold"
               style={{
-                zIndex: "50",
+                zIndex: "5",
                 fontSize: "30px",
                 paddingBottom: "12px",
               }}
