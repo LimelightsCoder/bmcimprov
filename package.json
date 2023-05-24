@@ -1,7 +1,7 @@
 {
   "name": "bmcimprov",
   "private": true,
-  "homepage": "https://bmcimprov.netlify.app",
+  "homepage": "http://localhost:5173/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
