@@ -27,8 +27,7 @@ assets
 *.sw?
 
 /client/.eslintrc.cjs
-*.jpeg
 *.mp4
 *.gif
 *.MOV
-*.png
+
