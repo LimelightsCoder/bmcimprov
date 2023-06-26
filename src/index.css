@@ -84,7 +84,7 @@ body {
   }
 }
 
-@media (min-width: 390px) and (max-width: 768px) {
+@media (min-width: 400px) and (max-width: 768px) {
   .google-calendar {
     width: 100vw;
     height: calc(90vw * 0.75); /* Maintain 4:3 aspect ratio */
@@ -119,7 +119,7 @@ body {
   font-family: "Garage Gothic FB Bold";
 }
 
-@media (max-width: 390px) {
+@media (max-width: 400px) {
   .responsive-text {
     font-size: 85px;
     text-align: left;
@@ -150,7 +150,7 @@ body {
   width: max-content;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 400px) {
   .mobile-menu {
     width: 100%;
   }
@@ -159,7 +159,7 @@ body {
   }
   .animate-scroll {
     animation: scroll 5s linear infinite;
-    width: 390px;
+    width: 400px;
   }
 }
 
@@ -181,7 +181,7 @@ body {
 
 
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 400px) {
   .img-summary {
       flex-direction: column;
       order: 2;
@@ -254,6 +254,7 @@ body {
   .img-gallery6 {
       flex-direction: column;
       order: 1;
+      max-width: 100%;
   }
 
   .img-summary7 {
@@ -283,7 +284,18 @@ body {
 }
 }
 
+@media (min-width: 400px) and (max-width: 2560px) {
+  .img-summary6 {
+    flex-direction: column;
+    order: 2;
+}
 
+.img-gallery6 {
+    flex-direction: column;
+    order: 1;
+    max-width: 500px;
+}
+}
 
 
 

@@ -4,6 +4,7 @@ import Taty from "/src/assets/taty.jpeg";
 import Simone from "/src/assets/simone.png";
 import Jay from "/src/assets/jaywhite.jpeg";
 import Alexis from "/src/assets/alexis.jpeg";
+import Monique from "/src/assets/monique.jpg";
 import { Link } from "react-router-dom";
 
 const Squad = () => {
@@ -29,7 +30,7 @@ const Squad = () => {
           {/* Member 1 */}
 
           <div>
-            <div className="justify-between flex flex-col">
+            <div className="justify-center flex flex-row w-4/6 pl-4">
               <h2
                 style={{
                   fontSize: "36px",
@@ -70,6 +71,9 @@ const Squad = () => {
                 IFC.
                 <br />
               </p>
+
+
+              
               <div className="img-gallery">
                 <img src={Sean} alt="sean" />
               </div>
@@ -83,7 +87,7 @@ const Squad = () => {
           {/* Member 2 */}
 
           <div>
-            <div className="justify-between flex flex-col">
+            <div className="justify-end flex flex-row w-5/6">
               <h2
                 style={{
                   fontSize: "36px",
@@ -133,7 +137,7 @@ const Squad = () => {
           <br />
           {/* Member 3 */}
           <div>
-            <div className="justify-between flex flex-col">
+            <div className="justify-center flex flex-row w-4/6 pl-4">
               <h2
                 style={{
                   fontSize: "36px",
@@ -185,7 +189,7 @@ const Squad = () => {
           <br />
           {/* Member 4 */}
           <div>
-            <div className="justify-between flex flex-col">
+            <div className="justify-end flex flex-row w-5/6">
               <h2
                 style={{
                   fontSize: "36px",
@@ -233,7 +237,7 @@ const Squad = () => {
           <br />
           {/* Member 5 */}
           <div>
-            <div className="justify-between flex flex-col">
+            <div className="justify-center flex flex-row w-4/6 pl-4">
               <h2
                 style={{
                   fontSize: "36px",
@@ -273,6 +277,45 @@ const Squad = () => {
             </div>
           </div>
 
+          <br />
+          <br />
+          <br />
+          {/* Member 6 */}
+          <div>
+            <div className="justify-end flex flex-row w-5/6">
+              <h2
+                style={{
+                  fontSize: "36px",
+                  fontWeight: 700,
+                  textAlign: "center",
+                  paddingRight: "30px",
+                }}
+              >
+                Monique Parks
+              </h2>
+            </div>
+            <div className="flex flex-col sm:flex-row">
+              <div className="img-gallery6">
+                <img src={Monique} alt="monique" />
+              </div>
+              <p
+                className="text-center mt-5 text-[#0d0630] font-light mf:w-9/12 w-11/12 text-base img-summary6"
+                style={{
+                  fontFamily: "Roboto",
+                  fontSize: "20px",
+                  paddingLeft: "10px",
+                  paddingRight: "10px",
+                  fontWeight: 400
+                }}
+              >
+Monique Aya Parks is an East Coast native Roanoke, VA to be exact and is a Howard University Alum. She likes to include her middle name Aya because it means “Bright '' in Japanese and that is a perfect word to describe the energy she brings into a space. She made her way to California as an elementary educator in the Central Valley. Storytelling and bringing characters to life has always been a part of Monique’s journey whether she noticed it or not and her passion to share stories is what brings her to Los Angeles as an emerging Actor and Comedian. She has trained at The Uprights Citizen Brigade and performed with indie improv team Pink Kid and now BMC.
+                <br />
+                <br />
+                You can also see her perform with Pretty Ugly at The Pack Theater every other Sunday starting July 2023. 
+                <br />
+              </p>
+            </div>
+          </div>
           <br />
           <br />
           <br />
